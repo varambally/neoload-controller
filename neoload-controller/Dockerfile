@@ -5,7 +5,9 @@ FROM alpine:3.15.7 as builder
 ARG LIBERICA_URL=https://download.bell-sw.com/java/11.0.18+10/bellsoft-jre11.0.18+10-linux-x64-musl.tar.gz
 ARG LIBERICA_PATCH=https://github.com/Neotys-Labs/jre-patch-neoload/archive/refs/tags/jre-patch-11.0.18+10.tar.gz
 
+
 RUN apt install libxtst6
+
 
 ENV NL_VERSION=2023.1.1
 ARG URL=https://www.neotys.com/redirect/redirect.php?product=neoload&target=direct-download&os=linux&version=${NL_VERSION}&format=tar.gz
